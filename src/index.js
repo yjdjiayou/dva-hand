@@ -91,6 +91,7 @@ app.model({
             return {number: state.number + (action.payload || 1)};
         }
     },
+    // 用于处理异步操作和业务逻辑
     effects: {
         * asyncAdd(action, {call, put}) {
             yield call(delay, 1000);
@@ -101,8 +102,10 @@ app.model({
             yield put(routerRedux.push(pathname));//connected-react-router
         }
     },
+    // 只在 app.start() 时执行一次
     subscriptions: {
-        setup() {
+        setup({ history, dispatch }) {
+            console.log({ history, dispatch });
             console.log('start subscriptions')
         }
     }
