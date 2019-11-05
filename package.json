@@ -1,7 +1,6 @@
 {
   "name": "dva-hand",
   "version": "0.1.0",
-  "private": true,
   "dependencies": {
     "connected-react-router": "^6.5.2",
     "dva-loading": "^3.0.8",
