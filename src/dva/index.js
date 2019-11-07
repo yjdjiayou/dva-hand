@@ -129,7 +129,7 @@ export default function (options) {
             }
         }
 
-        const App = app._router({history});
+        const App = app._router({history,app});
         ReactDOM.render(
             <Provider store={store}>
                 <ConnectedRouter history={history}>

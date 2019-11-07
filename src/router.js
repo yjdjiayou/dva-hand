@@ -1,9 +1,15 @@
 import React from 'react';
-import {Home} from "./routes/Home";
-import {Counter} from "./routes/Counter";
+import Home from "./routes/Home";
+// import Counter from "./routes/Counter";
 import {Router, Switch, Route, Link} from './dva/router';
+import {dynamic} from "./dva/dynamic";
 
- function RouterConfig({ history }) {
+ function RouterConfig({ history,app }) {
+     const Counter = dynamic({
+         app,
+         models:()=>[import('./models/counter')],
+         component: () => import('./routes/Counter')
+     });
     return (
         <Router history={history}>
             <>

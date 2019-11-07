@@ -1,7 +1,7 @@
 import React from 'react';
 import  {connect} from '../dva';
 
-export const Counter = connect(state => state.counter)(
+const Counter = connect(state => state.counter)(
     props => (
         <>
             <p>{props.number}</p>
@@ -11,3 +11,5 @@ export const Counter = connect(state => state.counter)(
         </>
     )
 );
+
+export default  Counter;
