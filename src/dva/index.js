@@ -142,16 +142,3 @@ export default function (options) {
     return app;
 }
 
-/**
- {
-            namespace:'counter',
-            state:{number:0},
-            reducers:{
-                add(state){
-                    return {number:state.number+1};
-                },
-                minus(state){
-                    return {number:state.number-1};
-                }
-            }
-        } */

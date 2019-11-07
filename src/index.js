@@ -2,7 +2,7 @@ import React from 'react';
 import dva from './dva';
 import {createBrowserHistory} from 'history';
 import {createLoading} from "./dva/dva-loading";
-//import createLoading from 'dva-loading';
+// import createLoading from 'dva-loading';
 import logger from 'redux-logger';
 
 const history = createBrowserHistory();
